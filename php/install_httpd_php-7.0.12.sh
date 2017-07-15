@@ -44,7 +44,7 @@ if [ $CPU_NUM -gt 1 ];then
 else
     make ZEND_EXTRA_LIBS='-liconv'
 fi
-make install
+make clean && make && make install
 cd ..
 cp ./php-7.0.12/php.ini-production /alidata/server/php/etc/php.ini
 #adjust php.ini
